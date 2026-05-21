@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Ava Martinez",
+    "picture": "https://randomuser.me/api/portraits/women/12.jpg",
+    "email": "ava.martinez@example.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Met during university orientation. Loves photography and weekend road trips.",
+    "goal": 14,
+    "next_due_date": "2026-05-25"
+  },
+  {
+    "id": 2,
+    "name": "Liam Carter",
+    "picture": "https://randomuser.me/api/portraits/men/22.jpg",
+    "email": "liam.carter@example.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["gym", "work buddy"],
+    "bio": "Workout partner from the local gym. Always shares fitness tips.",
+    "goal": 10,
+    "next_due_date": "2026-05-30"
+  },
+  {
+    "id": 3,
+    "name": "Sophia Nguyen",
+    "picture": "https://randomuser.me/api/portraits/women/31.jpg",
+    "email": "sophia.nguyen@example.com",
+    "days_since_contact": 22,
+    "status": "overdue",
+    "tags": ["designer", "creative"],
+    "bio": "Collaborated on freelance design projects. Enjoys digital art and coffee shops.",
+    "goal": 14,
+    "next_due_date": "2026-05-22"
+  },
+  {
+    "id": 4,
+    "name": "Ethan Brooks",
+    "picture": "https://randomuser.me/api/portraits/men/41.jpg",
+    "email": "ethan.brooks@example.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": ["gaming", "best friend"],
+    "bio": "Childhood friend who still joins online gaming sessions every weekend.",
+    "goal": 7,
+    "next_due_date": "2026-05-27"
+  },
+  {
+    "id": 5,
+    "name": "Mia Thompson",
+    "picture": "https://randomuser.me/api/portraits/women/45.jpg",
+    "email": "mia.thompson@example.com",
+    "days_since_contact": 11,
+    "status": "almost due",
+    "tags": ["travel", "photography"],
+    "bio": "Met during a backpacking trip in Thailand. Frequently exchanges travel ideas.",
+    "goal": 10,
+    "next_due_date": "2026-05-24"
+  },
+  {
+    "id": 6,
+    "name": "Noah Wilson",
+    "picture": "https://randomuser.me/api/portraits/men/56.jpg",
+    "email": "noah.wilson@example.com",
+    "days_since_contact": 30,
+    "status": "overdue",
+    "tags": ["startup", "mentor"],
+    "bio": "Former internship mentor who gives career and startup advice.",
+    "goal": 21,
+    "next_due_date": "2026-05-21"
+  },
+  {
+    "id": 7,
+    "name": "Isabella Rossi",
+    "picture": "https://randomuser.me/api/portraits/women/60.jpg",
+    "email": "isabella.rossi@example.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": ["music", "concert buddy"],
+    "bio": "Enjoys indie music festivals and collecting vinyl records.",
+    "goal": 14,
+    "next_due_date": "2026-06-01"
+  },
+  {
+    "id": 8,
+    "name": "Daniel Kim",
+    "picture": "https://randomuser.me/api/portraits/men/68.jpg",
+    "email": "daniel.kim@example.com",
+    "days_since_contact": 14,
+    "status": "almost due",
+    "tags": ["tech", "coding friend"],
+    "bio": "Met through a hackathon. Loves building side projects and discussing AI.",
+    "goal": 14,
+    "next_due_date": "2026-05-23"
+  }
+]
