@@ -27,7 +27,7 @@ const Count = () => {
                 <p className="stat-desc">Interactions This month</p>
                 </div>
             </div>
-            
+             <hr className="text-[#E9E9E9] w-screen container mx-auto pb-8 mt-6" />
         </div>
     );
 };

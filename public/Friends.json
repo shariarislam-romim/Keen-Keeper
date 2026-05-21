@@ -94,5 +94,29 @@
     "bio": "Met through a hackathon. Loves building side projects and discussing AI.",
     "goal": 14,
     "next_due_date": "2026-05-23"
+  },
+  {
+    "id": 9,
+    "name": "Charlotte Evans",
+    "picture": "https://randomuser.me/api/portraits/women/72.jpg",
+    "email": "charlotte.evans@example.com",
+    "days_since_contact": 9,
+    "status": "almost due",
+    "tags": ["book club", "writer"],
+    "bio": "Met at a local book club. Loves mystery novels and late-night café discussions.",
+    "goal": 10,
+    "next_due_date": "2026-05-26"
+  },
+  {
+    "id": 10,
+    "name": "Jacob Miller",
+    "picture": "https://randomuser.me/api/portraits/men/77.jpg",
+    "email": "jacob.miller@example.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["football", "neighbor"],
+    "bio": "Neighborhood friend who organizes weekend football matches and BBQ nights.",
+    "goal": 7,
+    "next_due_date": "2026-05-29"
   }
 ]

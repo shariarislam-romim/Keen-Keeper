@@ -1,9 +1,23 @@
+import { use } from "react";
+import FriendCard from "./FriendCard";
 
+const friendsPromise = fetch("/public/Friends.json").then((res)=> res.json());
 
 const AllFriends = () => {
+    const friends = use(friendsPromise)
+    console.log(friends,"All friends")
     return (
-        <div>
-            <h1>Your Friends</h1>
+        <div className="my-12 container mx-auto">
+            <h1 className="font-bold text-3xl mb-5">Your Friends</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                {
+                    friends.map((friend)=>{
+                        return (
+                            <FriendCard key={friend.id} friend={friend}></FriendCard>
+                        )
+                    })
+                }
+            </div>
         </div>
     );
 };
