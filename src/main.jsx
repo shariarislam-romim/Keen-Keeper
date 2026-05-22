@@ -8,6 +8,8 @@ import Timeline from './pages/Timeline.jsx'
 import Error from './pages/Error.jsx'
 import Stats from './pages/Stats.jsx'
 import FriendDetails from './pages/detailsPage/FriendDetails.jsx'
+import DetailsProvider from './component/context/DetailsProvider.jsx'
+import { ToastContainer } from 'react-toastify'
 
 const router = createBrowserRouter([
   {
@@ -38,7 +40,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <DetailsProvider>
+      <RouterProvider router={router}/>
+    </DetailsProvider>
+   <ToastContainer></ToastContainer>
   </StrictMode>,
 )
 

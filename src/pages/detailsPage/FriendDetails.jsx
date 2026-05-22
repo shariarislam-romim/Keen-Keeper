@@ -5,6 +5,9 @@ import { LuMessageSquareMore } from "react-icons/lu";
 import { RiDeleteBin6Line, RiNotificationSnoozeLine } from "react-icons/ri";
 import { useLoaderData, useParams } from "react-router";
 import '../../App.css'
+import { toast } from "react-toastify";
+import { useContext } from "react";
+import { DetailsContext } from "../../component/context/DetailsProvider";
 
 
 const FriendDetails = () => {
@@ -15,19 +18,41 @@ const FriendDetails = () => {
     // console.log(friends)
 
     const selectFriend = friends.find((friend)=> friend.id == selectId)
-    console.log(selectFriend)
+    // console.log(selectFriend)
 
-    const formatDate = (date) =>
+    const context = useContext(DetailsContext)
+    const {addCheck}=context;
+
+    const dateFormat = (date) =>
     new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
     });
 
+    const handleCheck = (type) => {
+    const date = new Date().toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+
+    const newEntry = {
+      friendId: selectFriend.id,
+      friendName: selectFriend.name,
+      type,
+      time: date,
+    };
+
+    addCheck(newEntry);
+    toast.success(`${type} ${selectFriend.name}`);
+  };
+  
+
     return (
 
-        <div className="w-11/12 pt-20 pb-8 container mx-auto">
-      <div className="flex flex-col md:flex-row gap-4">
+        <div className="w-11/12 pt-20 pb-12 container mx-auto">
+      <div className="flex flex-col md:flex-row gap-5">
         <div>
           <div className="grid place-items-center text-center p-3 shadow-sm bg-base-100 rounded-lg">
             <div>
@@ -103,7 +128,7 @@ const FriendDetails = () => {
         </div>
 
         <div>
-          <div className="grid grid-cols-3 gap-4 pb-4">
+          <div className="grid grid-cols-3 gap-5 pb-4">
             <div className="bg-base-100 p-5 rounded-md shadow-sm text-center">
               <h2 className="green pt-4 font-semibold text-[16px] md:text-2xl">
                 {selectFriend.days_since_contact}
@@ -124,7 +149,7 @@ const FriendDetails = () => {
 
             <div className="bg-base-100 p-5 rounded-md shadow-sm text-center">
               <h2 className="green pt-4 font-semibold text-[16px] md:text-2xl">
-                {formatDate(selectFriend.next_due_date)}
+                {dateFormat(selectFriend.next_due_date)}
               </h2>
               <p className="gray pt-4 text-lg">Next Due</p>
             </div>
@@ -152,7 +177,7 @@ const FriendDetails = () => {
 
               <div className="grid grid-cols-3 gap-4">
                 <div
-                  onClick={() => handleCheckin("Call")}
+                  onClick={() => handleCheck("Call")}
                   className="bg-[#F8FAFC]  shadow-sm grid place-items-center border border-gray-200 p-6 rounded-sm"
                 >
                   <h3 className="blue font-bold text-2xl ">
@@ -162,7 +187,7 @@ const FriendDetails = () => {
                 </div>
 
                 <div
-                  onClick={() => handleCheckin("Text")}
+                  onClick={() => handleCheck("Text")}
                   className="bg-[#F8FAFC] shadow-sm grid place-items-center border border-gray-200 p-6 rounded-sm"
                 >
                   <h3 className="font-bold text-2xl text-[#1F2937]">
@@ -172,7 +197,7 @@ const FriendDetails = () => {
                 </div>
 
                 <div
-                  onClick={() => handleCheckin("Video")}
+                  onClick={() => handleCheck("Video")}
                   className="bg-[#F8FAFC] shadow-sm grid place-items-center border border-gray-200 p-6 rounded-sm"
                 >
                   <h3 className="blue font-bold text-2xl">
