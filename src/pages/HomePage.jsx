@@ -4,7 +4,7 @@ import Count from "../component/home/Count";
 
 const HomePage = () => {
     return (
-        <div className="bg-[#F8FAFC]">
+        <div className="bg-[#F8FAFC] pb-3">
             <Banner></Banner>
             <Count></Count>
             <AllFriends></AllFriends>

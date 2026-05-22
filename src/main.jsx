@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage.jsx'
 import Timeline from './pages/Timeline.jsx'
 import Error from './pages/Error.jsx'
 import Stats from './pages/Stats.jsx'
+import FriendDetails from './pages/detailsPage/FriendDetails.jsx'
 
 const router = createBrowserRouter([
   {
@@ -24,12 +25,12 @@ const router = createBrowserRouter([
       {
         path : "/stats",
         element: <Stats/>,
+      },
+      {
+        path: "/friendDetails/:selectId",
+        Component: FriendDetails,
+        loader: ()=> fetch('/Friends.json')
       }
-      // {
-      //   path: "/bookDetails/:bookId",
-      //   Component: BookDetails,
-      //   loader: ()=> fetch('/booksData.json')
-      // }
     ],
     errorElement: <Error/>,
   }

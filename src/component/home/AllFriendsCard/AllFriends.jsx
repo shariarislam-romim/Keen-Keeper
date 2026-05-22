@@ -7,7 +7,7 @@ const AllFriends = () => {
     const friends = use(friendsPromise)
     console.log(friends,"All friends")
     return (
-        <div className="my-12 container mx-auto">
+        <div className="my-10 container mx-auto">
             <h1 className="font-bold text-3xl mb-5">Your Friends</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                 {
