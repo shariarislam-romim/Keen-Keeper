@@ -1,11 +1,33 @@
-import { use } from "react";
+
+import { useEffect, useState } from "react";
 import FriendCard from "./FriendCard";
 
-const friendsPromise = fetch("/public/Friends.json").then((res)=> res.json());
+// const friendsPromise = fetch("/Friends.json").then((res)=> res.json());
 
 const AllFriends = () => {
-    const friends = use(friendsPromise)
-    console.log(friends,"All friends")
+
+    // const friends = use(friendsPromise)
+    // console.log(friends,"All friends")
+
+    const [friends,setFriends] = useState([]);
+    const [loading,setLoading] = useState(true);
+
+    useEffect(() => {
+        fetch("/Friends.json").then((res)=> res.json())
+        .then((data)=>{
+            setFriends(data);
+            setLoading(false);
+        })
+    }, []);
+
+    if(loading){
+        return(
+            <div className="flex justify-center items-center h-80">
+        <span className="loading loading-spinner loading-md"></span>
+      </div>
+        )
+    }
+
     return (
         <div className="my-10 container mx-auto">
             <h1 className="font-bold text-3xl mb-5">Your Friends</h1>

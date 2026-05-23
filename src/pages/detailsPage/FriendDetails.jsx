@@ -47,7 +47,7 @@ const FriendDetails = () => {
     addCheck(newEntry);
     toast.success(`${type} ${selectFriend.name}`);
   };
-  
+
 
     return (
 
@@ -165,7 +165,8 @@ const FriendDetails = () => {
 
             <p className="gray text-[18px] ">
               Connect every
-              <span className="font-bold text-black">{selectFriend.goal} days</span>
+              <span className="font-bold text-black">
+                {" "}{selectFriend.goal} days</span>
             </p>
           </div>
 
@@ -178,8 +179,7 @@ const FriendDetails = () => {
               <div className="grid grid-cols-3 gap-4">
                 <div
                   onClick={() => handleCheck("Call")}
-                  className="bg-[#F8FAFC]  shadow-sm grid place-items-center border border-gray-200 p-6 rounded-sm"
-                >
+                  className="bg-[#F8FAFC]  shadow-sm grid place-items-center border border-gray-200 p-6 rounded-sm">
                   <h3 className="blue font-bold text-2xl ">
                     <FiPhoneCall />
                   </h3>
@@ -188,8 +188,7 @@ const FriendDetails = () => {
 
                 <div
                   onClick={() => handleCheck("Text")}
-                  className="bg-[#F8FAFC] shadow-sm grid place-items-center border border-gray-200 p-6 rounded-sm"
-                >
+                  className="bg-[#F8FAFC] shadow-sm grid place-items-center border border-gray-200 p-6 rounded-sm">
                   <h3 className="font-bold text-2xl text-[#1F2937]">
                     <LuMessageSquareMore />
                   </h3>
@@ -198,8 +197,7 @@ const FriendDetails = () => {
 
                 <div
                   onClick={() => handleCheck("Video")}
-                  className="bg-[#F8FAFC] shadow-sm grid place-items-center border border-gray-200 p-6 rounded-sm"
-                >
+                  className="bg-[#F8FAFC] shadow-sm grid place-items-center border border-gray-200 p-6 rounded-sm">
                   <h3 className="blue font-bold text-2xl">
                     <IoVideocamOutline />
                   </h3>
