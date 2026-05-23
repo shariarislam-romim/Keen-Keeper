@@ -31,7 +31,7 @@ const Stats = ({ isAnimationActive = true }) => {
     ];
 
     return (
-        <div className="pt-10 pb-15 md:pt-20 md:pb-20 bg-[#F8FAFC]">
+        <div className="pt-10 pb-6 md:pt-20 md:pb-20 bg-[#F8FAFC]">
             {
                 check.length === 0 ? (
                     <div className=" text-center shadow-sm bg-red-500 p-4 w-11/12 mx-auto rounded-md ">
@@ -63,9 +63,8 @@ const Stats = ({ isAnimationActive = true }) => {
                                     }
                                     </Pie>
 
-
                                     <Tooltip />
-                                    <Legend  wrapperStyle={{ paddingTop: "25px" }} />
+                                    <Legend  wrapperStyle={{ paddingTop: "20px" }} />
                                     </PieChart>
                                 </div>
                             </div>

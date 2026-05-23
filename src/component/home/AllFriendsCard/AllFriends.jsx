@@ -1,6 +1,7 @@
 
-import { useEffect, useState } from "react";
 import FriendCard from "./FriendCard";
+import { DetailsContext } from "../../context/DetailsProvider";
+import { use } from "react";
 
 // const friendsPromise = fetch("/Friends.json").then((res)=> res.json());
 
@@ -9,16 +10,7 @@ const AllFriends = () => {
     // const friends = use(friendsPromise)
     // console.log(friends,"All friends")
 
-    const [friends,setFriends] = useState([]);
-    const [loading,setLoading] = useState(true);
-
-    useEffect(() => {
-        fetch("/Friends.json").then((res)=> res.json())
-        .then((data)=>{
-            setFriends(data);
-            setLoading(false);
-        })
-    }, []);
+    const {friends,loading} = use(DetailsContext)
 
     if(loading){
         return(
